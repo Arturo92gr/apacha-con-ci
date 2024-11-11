@@ -19,7 +19,7 @@ jobs:
                 username: ${{ secrets.DOCKERHUB_USERNAME }}
                 password: ${{ secrets.DOCKERHUB_TOKEN }}
             - name: Preparar construcción con Docker Builds
-              uses: docker/setup-buildx-action@v2
+              uses: docker/setup-buildx-action@v3
             - name: Construir imagen y subirla a Docker Hub
               uses: docker/build-push-action@v6
               with:
